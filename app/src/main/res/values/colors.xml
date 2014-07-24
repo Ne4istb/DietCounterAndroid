@@ -1,0 +1,6 @@
+<resources>
+    <color name="due">#003366</color>
+    <color name="overdue">#9c0b00</color>
+    <color name="paid">#2aa600</color>
+    <color name="gray">#BBBBBB</color>
+</resources>

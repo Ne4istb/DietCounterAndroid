@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Счетчик калорий</string>
+    <string name="title_food">Еда</string>
+    <string name="title_water">Вода</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_food">Покушать</string>
+    <string name="title_activity_my">MyActivity</string>
+
+</resources>
