@@ -1,6 +1,9 @@
 <resources>
-    <color name="due">#003366</color>
-    <color name="overdue">#9c0b00</color>
-    <color name="paid">#2aa600</color>
+    <color name="carbohydrates_left">#EB9D27</color>
+    <color name="carbohydrates_used">#9A6310</color>
+    <color name="proteins_left">#4156E2</color>
+    <color name="proteins_used">#132492</color>
+    <color name="fat_left">#24C048</color>
+    <color name="fat_used">#136325</color>
     <color name="gray">#BBBBBB</color>
 </resources>

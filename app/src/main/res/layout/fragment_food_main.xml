@@ -14,12 +14,193 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.ne4istb.my.dietcounter.PercentView
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/relativeLayoutCircle"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/section_label"
+        android:layout_toEndOf="@+id/section_label"
+        android:layout_above="@+id/textView">
 
-        android:id="@+id/percentview"
+        <com.ne4istb.my.dietcounter.CirclePiesView
 
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:id="@+id/piesView"
+
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAddFood"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tableLayout">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Съедено, ккал"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textEaten"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:id="@+id/textCategory"
+                android:layout_column="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Осталось, ккал"
+                android:id="@+id/textLeft"
+                android:layout_column="3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0"
+                android:textColor="@color/carbohydrates_used"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/txtCarbohydratesEaten"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Углеводы"
+                android:id="@+id/txtCarbohydrates"
+                android:layout_column="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/carbohydrates_left"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="721"
+                android:id="@+id/txtCarbohydratesLeft"
+                android:layout_column="3"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0"
+                android:textStyle="bold"
+                android:textColor="@color/proteins_used"
+                android:gravity="center"
+
+                android:id="@+id/txtProteinsEaten"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center"
+                android:text="Белки"
+                android:textStyle="bold"
+                android:id="@+id/txtProteins"
+                android:layout_column="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:textColor="@color/proteins_left"
+                android:text="295"
+                android:id="@+id/txtProteinsLeft"
+                android:layout_column="3" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/fat_used"
+                android:id="@+id/txtFatEaten"
+                android:layout_column="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center"
+                android:text="Жиры"
+                android:textStyle="bold"
+                android:id="@+id/txtFat"
+                android:layout_column="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="320"
+                android:textStyle="bold"
+                android:textColor="@color/fat_left"
+                android:id="@+id/txtFatLeft"
+                android:layout_column="3" />
+        </TableRow>
+
+    </TableLayout>
+
 
     <Button
         android:layout_width="fill_parent"
@@ -28,170 +209,5 @@
         android:id="@+id/btnAddFood"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Осталось:"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textStyle="bold" />
-
-    <FrameLayout
-        android:id="@+id/FrameLayout02"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="ккал"
-            android:id="@+id/txtCarbohydratesCal"
-            android:layout_gravity="right|center_vertical" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="721"
-            android:id="@+id/txtCarbohydrates"
-            android:layout_gravity="center" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Углеводы:"
-            android:id="@+id/textView2"
-            android:layout_gravity="left|top" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/FrameLayout03"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:layout_below="@+id/FrameLayout02"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="ккал"
-            android:id="@+id/txtProteinsCal"
-            android:layout_gravity="right|center_vertical" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="245"
-            android:id="@+id/txtProteins"
-            android:layout_gravity="center" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Белки:"
-            android:id="@+id/textView3"
-            android:layout_gravity="left|center_vertical" />
-
-    </FrameLayout>
-
-
-    <FrameLayout
-        android:id="@+id/FrameLayout04"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:layout_below="@+id/FrameLayout03"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="ккал"
-            android:id="@+id/txtFatCal"
-            android:layout_gravity="right|center_vertical" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="395"
-            android:id="@+id/txtFat"
-            android:layout_gravity="center" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Жиры"
-            android:id="@+id/textView4"
-            android:layout_gravity="left|center_vertical" />
-
-    </FrameLayout>
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/section_label"
-        android:layout_toEndOf="@+id/section_label"
-        android:layout_marginBottom="100dp"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/frameLayout4">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Норма"
-            android:id="@+id/textView8"
-            android:layout_gravity="left|top"
-            android:textStyle="bold|italic" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Углеводы - 100 г = 400 ккал"
-            android:id="@+id/textView9"
-            android:layout_marginTop="20dp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Белки - 100 г = 400 ккал"
-            android:id="@+id/textView10"
-            android:layout_marginTop="40dp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Жиры - 100 г = 900 ккал"
-            android:id="@+id/textView11"
-            android:layout_marginTop="60dp"
-            android:textStyle="italic" />
-
-    </RelativeLayout>
 
 </RelativeLayout>
